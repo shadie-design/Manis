@@ -37,9 +37,13 @@ include("includes/db.php");
         padding-top:-10px!important;
         border: 1px solid #000;
       }
+      .paddingDiv{
+        margin: 40!important;
+      }
       @media print {
           .btn-print {
             display:none !important;
+            visibility:hidden;
           }
       }
     </style>
@@ -48,17 +52,16 @@ include("includes/db.php");
 
 
        <center>
-<div class="section section-basic">
-                <div class="container">
+       <div class="col-lg-11 paddingDiv">
 
-<div class="row main"><!-- row 2 begin -->
+<div class="row main paddingDiv"><!-- row 2 begin -->
     <div class="col-lg-12"><!-- col-lg-12 begin -->
         <div class="panel panel-default"><!-- panel panel-default begin -->
             <div class="panel-heading"><!-- panel-heading begin -->
             <div class="row">
                 <div>
                          <h3 class="panel-title"><!-- panel-title begin -->
-                      <i class="fa fa-tags"></i>  Orders Report
+                      <i class="fa fa-tags"></i>  Products Report
                     </h3><!-- panel-title finish --> 
                     </div>
                    
@@ -67,8 +70,7 @@ include("includes/db.php");
                 
             </div><!-- panel-heading finish -->
             
-            <div class="panel-body"><!-- panel-body begin -->
-            <div class="table-responsive"><!-- table-responsive begin -->
+
                     <table class="table table-striped table-bordered table-hover"><!-- table table-striped table-bordered table-hover begin -->
                         
                         <thead><!-- thead begin -->
@@ -191,22 +193,15 @@ include("includes/db.php");
                             
                         </tbody><!-- tbody finish -->
                         
-                    </table><!-- table table-striped table-bordered table-hover finish -->
-                </div><!-- table-responsive finish -->
-            </div><!-- panel-body finish -->
-            
-        </div><!-- panel panel-default finish -->
-    </div><!-- col-lg-12 finish -->
-</div><!-- row 2 finish -->
+
 
                                 
 
 
         
-     <button type="button" class="btn btn-warning btn-round" onclick = "window.print()"><span class="now-ui-icons ui-1_check"></span> Print</button> 
-     <a href="index.php?view_orders" ><button type="button" class="btn btn-success btn-round"><span class="now-ui-icons ui-1_check"></span> Back</button></a>
-     </div>
-         </div>
+     <button type="button" class="btn btn-warning btn-round btn-print" onclick = "window.print()"><span class="now-ui-icons ui-1_check"></span> Print</button> 
+     <a href="index.php?view_orders" ><button type="button" class="btn btn-success btn-round btn-print"><span class="now-ui-icons ui-1_check"></span> Back</button></a>
+  </div>
     </center>
 
                                </div>
@@ -219,28 +214,6 @@ include("includes/db.php");
             </div>
         </div>
 <br><br><br><br>
-<footer class="footer" data-background-color="black">
-            <div class="container">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="" target="_blank">
-                                manis
-                            </a>
-                        </li>
-                        <li>
-                           cosmetics
-                        </li>
-                    </ul>
-                </nav>
-                <div class="copyright">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script> manis
-                </div>
-            </div>
-        </footer>
     </div>
 
     </body>
