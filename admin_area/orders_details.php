@@ -204,7 +204,7 @@ include("includes/db.php");
 
         
      <button type="button" class="btn btn-warning btn-round" onclick = "window.print()"><span class="now-ui-icons ui-1_check"></span> Print</button> 
-     <a href="index.php?view_products" ><button type="button" class="btn btn-success btn-round"><span class="now-ui-icons ui-1_check"></span> Back</button></a>
+     <a href="index.php?view_orders" ><button type="button" class="btn btn-success btn-round"><span class="now-ui-icons ui-1_check"></span> Back</button></a>
      </div>
          </div>
     </center>
