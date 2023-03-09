@@ -88,10 +88,10 @@
                 
                 <p><!-- p Start -->
                     
-                    <strong>The perfume House "Urembo pap !".</strong>
+                    <strong>Manis Cosmetics</strong>
                     <br/>Kelly
                     <br/>Wanjiru
-                    <br/>07********
+                    <br/>0792688232
                     <br/>kelly@gmail.com
                     <br/><strong>@kelly</strong>
                     

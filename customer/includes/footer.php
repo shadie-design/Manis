@@ -104,10 +104,10 @@
                 
                 <p><!-- p Start -->
                     
-                    <strong>The perfume House "Urembo pap!".</strong>
+                    <strong>Manis Cosmetics</strong>
                     <br/>Kelly
                     <br/>Wanjiru
-                    <br/>07********
+                    <br/>070792688232
                     <br/>kellywanjiru@gmail.com
                     <br/><strong>@kelly</strong>
                     
