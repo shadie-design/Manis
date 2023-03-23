@@ -31,6 +31,8 @@
         $m_id = $row_edit['manufacturer_id'];
         
         $p_image1 = $row_edit['product_img1'];
+        $p_image2 = $row_edit['product_img2'];
+        $p_image3 = $row_edit['product_img3'];
         
         $p_price = $row_edit['product_price'];
 
@@ -245,7 +247,7 @@
                    
                    <div class="form-group"><!-- form-group Begin -->
                        
-                      <label class="col-md-3 control-label"> Product Image</label> 
+                      <label class="col-md-3 control-label"> Product Image 1 (Main Image)</label> 
                       
                       <div class="col-md-6"><!-- col-md-6 Begin -->
                           
@@ -254,6 +256,38 @@
                           <br>
                           
                           <img width="70" height="70" src="product_images/<?php echo $p_image1; ?>" alt="<?php echo $p_image1; ?>">
+                          
+                      </div><!-- col-md-6 Finish -->
+                       
+                   </div><!-- form-group Finish -->
+
+                    <div class="form-group"><!-- form-group Begin -->
+                       
+                      <label class="col-md-3 control-label"> Product Image 2</label> 
+                      
+                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                          
+                          <input name="product_img2" type="file" class="form-control">
+                          
+                          <br>
+                          
+                          <img width="70" height="70" src="product_images/<?php echo $p_image2; ?>" alt="<?php echo $p_image2; ?>">
+                          
+                      </div><!-- col-md-6 Finish -->
+                       
+                   </div><!-- form-group Finish -->
+
+                   <div class="form-group"><!-- form-group Begin -->
+                       
+                      <label class="col-md-3 control-label"> Product Image 3</label> 
+                      
+                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                          
+                          <input name="product_img3" type="file" class="form-control">
+                          
+                          <br>
+                          
+                          <img width="70" height="70" src="product_images/<?php echo $p_image3; ?>" alt="<?php echo $p_image3; ?>">
                           
                       </div><!-- col-md-6 Finish -->
                        
@@ -352,23 +386,17 @@ if(isset($_POST['update'])){
     $manufacturer_id = $_POST['manufacturer'];
     $product_price = $_POST['product_price'];
     $product_quantity = $_POST['product_quantity'];
-    $product_label = $_POST['product_label'];
+    $product_label = 'new';
     $product_sale = $_POST['product_sale'];
     $product_keywords = $_POST['product_keywords'];
     $product_desc = $_POST['product_desc'];
 
 
 
-            // work for upload / update image
-        
-        $product_img1 = $_FILES['product_img1']['name'];
-
-        
-        $temp_name1 = $_FILES['product_img1']['tmp_name'];
-
-        
-        move_uploaded_file($temp_name1,"product_images/$product_img1");
-
+        if(is_uploaded_file($_FILES['product_img1']['tmp_name'])){
+           $product_img1 = $_FILES['product_img1']['name'];
+           $temp_name1 = $_FILES['product_img1']['tmp_name'];
+           move_uploaded_file($temp_name1,"product_images/$product_img1");
         
         $update_product = "update products set p_cat_id='$product_cat',cat_id='$cat',manufacturer_id='$manufacturer_id',date=NOW(),product_title='$product_title',product_img1='$product_img1',product_keywords='$product_keywords',product_desc='$product_desc',product_price='$product_price',product_quantity='$product_quantity' where product_id='$p_id'";
         
@@ -382,6 +410,47 @@ if(isset($_POST['update'])){
             
         }
         
+        }
+
+        if(is_uploaded_file($_FILES['product_img2']['tmp_name'])){
+           $product_img2 = $_FILES['product_img2']['name'];
+           $temp_name2 = $_FILES['product_img2']['tmp_name'];
+           move_uploaded_file($temp_name2,"product_images/$product_img2");
+        
+        $update_product = "update products set p_cat_id='$product_cat',cat_id='$cat',manufacturer_id='$manufacturer_id',date=NOW(),product_title='$product_title',product_img2='$product_img2',product_keywords='$product_keywords',product_desc='$product_desc',product_price='$product_price',product_quantity='$product_quantity' where product_id='$p_id'";
+        
+        $run_product = mysqli_query($con,$update_product);
+        
+        if($run_product){
+            
+        echo "<script>alert('Your product has been updated Successfully')</script>"; 
+            
+        echo "<script>window.open('index.php?view_products','_self')</script>"; 
+            
+        }
+        
+        }
+
+
+         if(is_uploaded_file($_FILES['product_img3']['tmp_name'])){
+           $product_img3 = $_FILES['product_img3']['name'];
+           $temp_name3 = $_FILES['product_img3']['tmp_name'];
+           move_uploaded_file($temp_name3,"product_images/$product_img3");
+        
+        $update_product = "update products set p_cat_id='$product_cat',cat_id='$cat',manufacturer_id='$manufacturer_id',date=NOW(),product_title='$product_title',product_img3='$product_img3',product_keywords='$product_keywords',product_desc='$product_desc',product_price='$product_price',product_quantity='$product_quantity' where product_id='$p_id'";
+        
+        $run_product = mysqli_query($con,$update_product);
+        
+        if($run_product){
+            
+        echo "<script>alert('Your product has been updated Successfully')</script>"; 
+            
+        echo "<script>window.open('index.php?view_products','_self')</script>"; 
+            
+        }
+        
+        }
+
     
     
 }

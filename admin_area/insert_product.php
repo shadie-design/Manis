@@ -177,11 +177,35 @@
                    
                    <div class="form-group"><!-- form-group Begin -->
                        
-                      <label class="col-md-3 control-label"> Product Image </label> 
+                      <label class="col-md-3 control-label"> Product Image 1 (Main image)</label> 
                       
                       <div class="col-md-6"><!-- col-md-6 Begin -->
                           
                           <input name="product_img1" type="file" class="form-control" required>
+                          
+                      </div><!-- col-md-6 Finish -->
+                       
+                   </div><!-- form-group Finish -->
+
+                    <div class="form-group"><!-- form-group Begin -->
+                       
+                      <label class="col-md-3 control-label"> Product Image 2</label> 
+                      
+                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                          
+                          <input name="product_img2" type="file" class="form-control" required>
+                          
+                      </div><!-- col-md-6 Finish -->
+                       
+                   </div><!-- form-group Finish -->
+
+                    <div class="form-group"><!-- form-group Begin -->
+                       
+                      <label class="col-md-3 control-label"> Product Image 3</label> 
+                      
+                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                          
+                          <input name="product_img3" type="file" class="form-control" required>
                           
                       </div><!-- col-md-6 Finish -->
                        
@@ -274,21 +298,27 @@ if(isset($_POST['submit'])){
     $manufacturer_id = $_POST['manufacturer'];
     $product_price = $_POST['product_price'];
     $product_quantity = $_POST['product_quantity'];
-    $product_label = $_POST['product_label'];
+    $product_label = 'new';
     $product_sale = $_POST['product_sale'];
     $product_keywords = $_POST['product_keywords'];
     $product_desc = $_POST['product_desc'];
     
     $product_img1 = $_FILES['product_img1']['name'];
+    $product_img2 = $_FILES['product_img2']['name'];
+    $product_img3 = $_FILES['product_img3']['name'];
 
     
     $temp_name1 = $_FILES['product_img1']['tmp_name'];
+    $temp_name2 = $_FILES['product_img2']['tmp_name'];
+    $temp_name3 = $_FILES['product_img3']['tmp_name'];
 
     
     move_uploaded_file($temp_name1,"product_images/$product_img1");
+    move_uploaded_file($temp_name2,"product_images/$product_img2");
+    move_uploaded_file($temp_name3,"product_images/$product_img3");
 
     
-    $insert_product = "insert into products (p_cat_id,cat_id,manufacturer_id,date,product_title,product_img1,product_price,product_quantity,product_label,product_sale,product_keywords,product_desc) values ('$product_cat','$cat','$manufacturer_id',NOW(),'$product_title','$product_img1','$product_price','$product_quantity','$product_label','$product_sale','$product_keywords','$product_desc')";
+    $insert_product = "insert into products (p_cat_id,cat_id,manufacturer_id,date,product_title,product_img1,product_img2,product_img3,product_price,product_quantity,product_label,product_sale,product_keywords,product_desc) values ('$product_cat','$cat','$manufacturer_id',NOW(),'$product_title','$product_img1','$product_img2','$product_img3','$product_price','$product_quantity','$product_label','$product_sale','$product_keywords','$product_desc')";
     
     $run_product = mysqli_query($con,$insert_product);
     
