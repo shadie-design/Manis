@@ -249,33 +249,6 @@
 
 
 
-            <li><!-- li begin -->
-                <a href="#" data-toggle="collapse" data-target="#shipping"><!-- a href begin -->
-                        
-                        <i class="fa fa-fw fa-ship"></i> Shipping
-                        <i class="fa fa-fw fa-caret-down"></i>
-                        
-                </a><!-- a href finish -->
-                
-                <ul id="shipping" class="collapse"><!-- collapse begin -->
-                    <li><!-- li begin -->
-                        <a href="index.php?shipped_orders">View shipped orders</a>
-                    </li><!-- li finish -->
-                    <li><!-- li begin -->
-                        <a href="index.php?unshipped_orders"> not shipped orders</a>
-                    </li><!-- li finish -->
-                </ul><!-- collapse finish -->
-                
-            </li><!-- li finish -->
-
-
-      
-
-
-
-
-            
-
             
             <li><!-- li begin -->
                 <a href="#" data-toggle="collapse" data-target="#users"><!-- a href begin -->
