@@ -2,7 +2,7 @@
 
 include("functions/login_function.php");
 
-$db = mysqli_connect("localhost","root","","cosmetics_test");
+$db = mysqli_connect("localhost","root","","manis");
 
 /// begin getRealIpUser functions ///
 
