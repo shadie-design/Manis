@@ -197,6 +197,10 @@
                         
                         include("confirm_payment.php");
 
+                }   if(isset($_GET['confirm_order'])){
+                        
+                        include("confirm_order.php");
+
                 }   if(isset($_GET['confirm_ordershipped'])){
                         
                         include("confirm_ordershipped.php"); 

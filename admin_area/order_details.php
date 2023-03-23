@@ -14,7 +14,7 @@ include("includes/db.php");
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>urembo pap!</title>
+    <title>manis cosmetics</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
@@ -265,19 +265,17 @@ if(isset($_GET['invoice_no'])){
                     <ul>
                         <li>
                             <a href="" target="_blank">
-                                Urembo
+                                Manis cosmetics
                             </a>
                         </li>
-                        <li>
-                            pap!
-                        </li>
+                        
                     </ul>
                 </nav>
                 <div class="copyright">
                     &copy;
                     <script>
                         document.write(new Date().getFullYear())
-                    </script> Shadie designs
+                    </script> @Kelly
                 </div>
             </div>
         </footer>

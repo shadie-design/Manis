@@ -60,6 +60,7 @@
                                 <th> Order Date: </th>
                                 <th> Total Amount: </th>
                                 <th> Status: </th>
+                                <th>Action: </th>
                                 <!--<th> Delete: </th>--> <!--currently disabled-->
                             </tr><!-- tr finish -->
                         </thead><!-- thead finish -->
@@ -114,13 +115,13 @@
 
                                     $customer_phoneNo = $row_phoneNo['customer_contact'];
                                     
-                                    $get_c_order = "select * from customer_orders where order_id='$order_id'";
+                                    $get_c_order = "select * from customer_orders where invoice_no='$invoice_no'";
                                     
                                     $run_c_order = mysqli_query($con,$get_c_order);
                                     
                                     $row_c_order = mysqli_fetch_array($run_c_order);
                                     if($row_c_order != null){
-                                        $order_date = $row_c_order['order_date'];
+                                        $order_date =  substr($row_c_order['order_date'],0,11);
                                     
                                         $order_amount = $row_c_order['due_amount'];
                                     }else{
@@ -161,6 +162,14 @@
                                     ?>
                                     
                                 </td>
+                                                
+                            <td>
+
+                            
+                            <a href="confirm_order.php?invoice_no=<?php echo $invoice_no; ?>" target="_self" class="btn btn-primary btn-sm green"> Confirmed paid </a>     
+                          
+                    
+                            </td>
                               
                             </tr><!-- tr finish -->
                             

@@ -21,23 +21,9 @@
 
 
          
-         <a href="order.php?c_id=<?php echo $customer_id ?>"> Offline Payment </a>
-         <h3 class="text-center">Paybill No: 8888880   |   Payment Number: 07********</h3>
+         <a href="order.php?c_id=<?php echo $customer_id ?>"> Cash On Delivery </a>
          
      </p><!-- lead text-center Finish -->
-     
-     <center><!-- center Begin -->
-         
-        <p class="lead"><!-- lead Begin -->
-            
-            <a href="#">
-                
-                <img class="img-responsive" src="images/mpesa.png" alt="img-paypall">
-                
-            </a>
-            
-        </p> <!-- lead Finish -->
-         
-     </center><!-- center Finish -->
+      
     
 </div><!-- box Finish -->

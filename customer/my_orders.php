@@ -32,7 +32,6 @@
                 <th> Shipping County: </th>
                 <th> Order Date:</th>
                 <th> Paid / Unpaid: </th>
-                <th> Status: </th>
                 
             </tr><!--  tr Finish  -->
             
@@ -108,11 +107,6 @@
                 <td> <?php echo $order_date; ?> </td>
                 <td> <?php echo $order_status; ?> </td>
                 
-                <td>
-                    
-                    <a href="confirm.php?order_id=<?php echo $order_id; ?>" target="_blank" class="btn btn-primary btn-sm"> Confirm Paid </a>
-                    
-                </td>
                 
             </tr><!--  tr Finish  -->
             
