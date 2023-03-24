@@ -150,7 +150,7 @@
                                    <tr><!-- tr Begin -->
                                        
                                        <th colspan="5">Total</th>
-                                       <th colspan="2">Ksh <?php echo $total; ?></th>
+                                       <th colspan="2">Ksh <?php echo $total + 250; ?></th>
                                        
                                    </tr><!-- tr Finish -->
                                    
@@ -387,14 +387,14 @@
                                <tr><!-- tr Begin -->
                                    
                                    <td> Order All Sub-Total </td>
-                                   <th> Ksh <?php echo $total; ?> </th>
+                                   <th> Ksh <?php echo $total + 250; ?> </th>
                                    
                                </tr><!-- tr Finish -->
                                
                                <tr><!-- tr Begin -->
                                    
                                    <td> Shipping and Handling </td>
-                                   <td> Ksh 0 </td>
+                                   <td> Ksh 250 </td>
                                    
                                </tr><!-- tr Finish -->
                                
@@ -408,7 +408,7 @@
                                <tr class="total"><!-- tr Begin -->
                                    
                                    <td> Total </td>
-                                   <th> Ksh <?php echo $total; ?> </th>
+                                   <th> Ksh <?php echo $total + 250; ?> </th>
                                    
                                </tr><!-- tr Finish -->
                                

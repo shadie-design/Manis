@@ -196,6 +196,8 @@ body{
     border: solid 1px #e6e6e6;
     margin-bottom: 30px;
     box-sizing: border-box;
+    height:400px;
+    width:300px;
 }
 #content .product .text{
     padding: 10px 10px 0px;
@@ -523,7 +525,12 @@ body{
     border-color: #000 #000 transparent transparent;
 }
 /* styling label finish*/
-                            
+
+
+.productSize{
+    height:400px;
+    width:300px;
+}
                             
                             
                             

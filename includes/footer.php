@@ -89,10 +89,10 @@
                 <p><!-- p Start -->
                     
                     <strong>Manis Cosmetics</strong>
-                    <br/>Kelly
+                    <br/>Kelley
                     <br/>Wanjiru
                     <br/>0792688232
-                    <br/>kelly@gmail.com
+                    <br/>kelleymwangi@gmail.com
                     <br/><strong>@kelly</strong>
                     
                 </p><!-- p Finish -->

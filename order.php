@@ -47,7 +47,7 @@ while($row_cart = mysqli_fetch_array($run_cart)){
     
     while($row_products = mysqli_fetch_array($run_products)){
         
-        $sub_total = $row_products['product_price']*$pro_qty;
+        $sub_total = $row_products['product_price']*$pro_qty + 250;
 
         
 
